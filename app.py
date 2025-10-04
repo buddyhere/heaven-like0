@@ -14,7 +14,7 @@ import asyncio
 app = Flask(__name__)
 bot_name = "None"
 
-@app.route('/')
+@app.router.add_get("/like", like)
 def home():
     return f"Bot {bot_name} is active"
 
